@@ -1,0 +1,63 @@
+.card {
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  opacity: 150%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  transition: 0.3s all ease-in-out;
+}
+.card img:hover {
+  opacity: 50%;
+}
+
+.card p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 100%;
+  z-index: 0;
+  font-weight: bold;
+}
+
+/* btn */
+.btn {
+  transition: ease-in-out 0.3s;
+  text-transform: uppercase;
+  border: 1px solid gray;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.btn:before {
+    transition: ease-in-out 0.3s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgray;
+}
+
+.btn:hover:before {
+    transition: ease-in-out 0.3s;
+    left: 0;
+    right: 0;
+    opacity: 100%;
+    z-index: -1;
+}
+
