@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./Page";
 import Contact from "./Page/Contact";
 import Shop from "./Page/Shop";
+import "swiper/css/bundle";
+
 
 function App() {
   return (

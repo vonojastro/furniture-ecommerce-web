@@ -1,48 +1,58 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
-import { Link } from 'react-router-dom';
-import Currency from './CurrencyDropdown';
-import './styles.css'
+import { Link } from "react-router-dom";
+import Currency from "./CurrencyDropdown";
+import "./styles.css";
 
 const Navbar = () => {
-  return (
-    <div className='w-full mx-auto'>
-      <div className='mx-[50px]  mx-auto '>
-        <div className='grid gap-4 grid-cols-3 justify-center h-[60px]'>
+  const [isUsd, setIsUsd] = useState(null);
+  const [usdToPeso, setUsdToPeso] = useState(54);
 
+  useEffect(() => {
+    const usd = localStorage.getItem("isUsd");
+    setIsUsd(usd);
+  }, [setIsUsd]);
+
+  return (
+    <div className="w-full mx-auto">
+      <div className="mx-[50px]  mx-auto ">
+        <div className="grid gap-4 grid-cols-3 justify-center h-[60px]">
           {/* Navlinks */}
 
-          <ul className='flex w-full gap-5 items-center cursor-pointer'>
-
-            <Link to='shop'>
+          <ul className="flex w-full gap-5 items-center cursor-pointer">
+            <Link to="shop">
               <li>Shop</li>
             </Link>
-            <Link to='about'>
+            <Link to="about">
               <li>About</li>
             </Link>
-            <Link to='collection'>
+            <Link to="collection">
               <li>Collection</li>
             </Link>
-
           </ul>
 
           {/* logo */}
-          <div className='flex items-center justify-center'>VON OJASTRO</div>
-
-          <div className='flex w-full gap-5 items-center cursor-pointer justify-end text-sm'>
-            <Currency className='nav-link' />
-            <CiUser style={{ fontSize: '1.5rem' }} className='nav-link' />
-            <CiShoppingCart style={{ fontSize: '1.5rem' }} className='nav-link' />
-            <CiHeart style={{ fontSize: '1.5rem' }} className='nav-link' />
+          <div className="flex items-center justify-center">
+            <Link to="/">
+              <h4>Von Ojastro</h4>
+            </Link>
           </div>
 
-
+          <div className="flex w-full gap-5 items-center cursor-pointer justify-end text-sm">
+            <Currency className="nav-link" setIsUsd={setIsUsd} isUsd={isUsd} />
+            <CiUser style={{ fontSize: "1.5rem" }} className="nav-link" />
+            <CiShoppingCart
+              style={{ fontSize: "1.5rem" }}
+              className="nav-link"
+            />
+            <CiHeart style={{ fontSize: "1.5rem" }} className="nav-link" />
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
