@@ -16,7 +16,7 @@ const Navbar = () => {
   }, [setIsUsd]);
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto bg-white">
       <div className="mx-[50px]  mx-auto ">
         <div className="grid gap-4 grid-cols-3 justify-center h-[60px]">
           {/* Navlinks */}

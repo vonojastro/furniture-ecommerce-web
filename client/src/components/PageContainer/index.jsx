@@ -4,10 +4,11 @@ import Cards from '../Cards'
 import Carousel from '../Carousel'
 
 
+
 const PageContainer = () => {
 
   return (
-      <div className='max-w-7xl max-h-screen mx-auto py-10'>
+      <div className='max-w-7xl h-full mx-auto py-10'>
       <Cards />
       <Banner />
       <Carousel />

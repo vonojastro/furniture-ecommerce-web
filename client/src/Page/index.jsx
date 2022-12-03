@@ -6,10 +6,8 @@ const LandingPage = () => {
   return (
     <>
       <HeroBanner />
-      <PageContainer>
+      <PageContainer />
 
-      
-      </PageContainer>
     </>
   )
 }
