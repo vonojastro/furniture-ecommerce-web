@@ -1,0 +1,10 @@
+.nav-link,
+ul li {
+    color: black;
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+}
+
+.nav-link:hover, ul li:hover {
+    color: lightgray;
+}
