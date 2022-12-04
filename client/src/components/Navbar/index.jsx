@@ -42,11 +42,18 @@ const Navbar = () => {
 
           <div className="flex w-full gap-5 items-center cursor-pointer justify-end text-sm">
             <Currency className="nav-link" setIsUsd={setIsUsd} isUsd={isUsd} />
-            <CiUser style={{ fontSize: "1.5rem" }} className="nav-link" />
-            <CiShoppingCart
-              style={{ fontSize: "1.5rem" }}
-              className="nav-link"
-            />
+
+            <Link to='login'>
+              <CiUser style={{ fontSize: "1.5rem" }} className="nav-link" />
+            </Link>
+
+            <Link to='cart'>
+              <CiShoppingCart
+                style={{ fontSize: "1.5rem" }}
+                className="nav-link"
+              />
+            </Link>
+
             <CiHeart style={{ fontSize: "1.5rem" }} className="nav-link" />
           </div>
         </div>
