@@ -10,7 +10,7 @@ const Currency = ({ setIsUsd, isUsd }) => {
     <div>
       <select
         className="text-gray-500"
-        style={{ fontSize: "0.8rem" }}
+        style={{ fontSize: "0.7rem" }}
         onChange={handleChange}
       >
         <option value={true}>USD</option>

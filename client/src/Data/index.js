@@ -1,4 +1,4 @@
-export const dummyData = [
+export const dummydata = [
     {
         id: 1,
         name: 'Furniture 1',
@@ -25,7 +25,7 @@ export const dummyData = [
     }
 ]
 
-export const dummyData2 = [
+export const dummydata2 = [
   
     {
         id: 4,
