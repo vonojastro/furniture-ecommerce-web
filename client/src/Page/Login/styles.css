@@ -1,3 +1,7 @@
+input:focus{
+    outline: none;
+}
+
 .btn {
     transition: ease-in-out 0.3s;
     text-transform: uppercase;
@@ -35,4 +39,3 @@
       z-index: -1;
    
   }
-  
